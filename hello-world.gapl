@@ -1,0 +1,14 @@
+#english
+
+#text
+The lines starting with # as the first character on a line are called pragma
+lines. They define how the content is to be inferred until the next pragma
+appears. The pragma with a spoken language's name, at the beginning of the file
+defines which language the rest of file is written in. The #english pragma
+above is an example of it.
+
+The #text pragma can be used to write prose, or comments, as we're doing here.
+The #code pragma starts executable code
+
+#code
+
