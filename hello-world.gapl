@@ -1,14 +1,78 @@
-#english
+
+#*language english
+
+#version 0.0.2
 
 #text
+
 The lines starting with # as the first character on a line are called pragma
-lines. They define how the content is to be inferred until the next pragma
-appears. The pragma with a spoken language's name, at the beginning of the file
-defines which language the rest of file is written in. The #english pragma
-above is an example of it.
+lines. Lines starting with two or more # characters are ignored.
+
+The pragmas define how the text is to be inferred until the next pragma
+appears.
+
+A pragma immediately following a non-empty line is ignored. This provision is
+in place to prevent mishandling text/documentation that happens to have a line
+beginning with a pragma. Besides, this also improves the readability of the
+code, by explicitly separating one pragma's section from the next.
+
+The pragma #*language, followed by a language's name, when present as the first
+non-empty line in a file, defines which language the rest of code is written
+in. The `#*language english` pragma above is an example of this.
+
+The following are all acceptable aliases of the #*language pragma:
+
+    #*
+    #*lang
+
+The #* alias is provided so that a GAPL program may be written in any language,
+without requiring the use of any English characters. #*lang is for convenience.
+
+The #language pragma changes the default language used to write the GAPL
+keywords. For example, whereas a developer comfortable with English
+language may write some code like so:
+
+    if (name = 'Joe')
+
+where `if` is a keyword when English #language is in effect. A developer who
+may be more comfortable with Hindi language may wite the same code as:
+
+    अगर (नाम = 'राजू')
+
+because when the Hindi #language is in effect, the token `अगर` acts equivalent
+to the `if` token above.
+
+This ability to choose a language allows the GAPL programs to be written in any
+written language of the world, as long as there's a mapping implemented between
+the keywords in the English language, and the target language.
+
+Similar to the keywords, the pragma names' mapping may also be provided, so
+that a developer can use the language of their choice when writing pragmas. For
+example, the #भाषा pragma may be an acceptable mapping for the #language pragma.
+
+The #version pragma specifies the version of the GAPL language in effect.
 
 The #text pragma can be used to write prose, or comments, as we're doing here.
 The #code pragma starts executable code
 
 #code
+
+#text
+
+Above is an example of an empty #code section.
+
+The code is composed of statements. Each statement is terminated by as
+semicolon `;`. Whitespace between tokens of text are ignored. The space
+character ` `, is the only accepted whitespace representation; any other
+characters, or byte sequences, like tabs, or NUL byte, are treated as an error.
+
+The `define` keyword, and its alias `def`, is used to define a variable in the
+code. The `undefine` keyword, or its alias `undef`, removes the variable from
+the runtime environment. Using a variable that hasn't been `define`d, or that
+has been `undefine`d, is an error. Some examples.
+
+    def         name;
+    define      age ;
+    undef       name;
+    undefine    age ;
 
