@@ -61,10 +61,10 @@ The #code pragma starts executable code
 
 Above is an example of an empty #code section.
 
-The code is composed of statements. Each statement is terminated by as
-semicolon `;`. Whitespace between tokens of text are ignored. The space
-character ` `, is the only accepted whitespace representation; any other
-characters, or byte sequences, like tabs, or NUL byte, are treated as an error.
+The code is composed of statements. Each statement is terminated by a semicolon
+`;`. Whitespace between tokens of text are ignored. The space character ` `, is
+the only accepted whitespace representation; any other characters, or byte
+sequences, like tabs, or NUL byte, are treated as an error.
 
 The `define` keyword, and its alias `def`, is used to define a variable in the
 code. The `undefine` keyword, or its alias `undef`, removes the variable from
@@ -85,4 +85,7 @@ Notes:
   - Memory safety; the programmer does not have direct access to memory via, say, pointers
   - No Runtime Overhead; tree-shaking; the resulting binary has no dead code
   - Functional; the result of executing a function on a given world-state is the same every time.
+  - The separator tokens, e.g parantheses and commas, are optional
+
+    This would make it easy to use GAPL as a shell/scripting language.
 
