@@ -84,8 +84,13 @@ Notes:
   - Strongly typed; the type of a variable or expression is known at compile time
   - Memory safety; the programmer does not have direct access to memory via, say, pointers
   - No Runtime Overhead; tree-shaking; the resulting binary has no dead code
-  - Functional; the result of executing a function on a given world-state is the same every time.
+  - Functional; the result of executing a function on a given world-state is the same every time
   - The separator tokens, e.g parantheses and commas, are optional
 
     This would make it easy to use GAPL as a shell/scripting language.
 
+  - The language is compiled _and_ interpreted
+
+    The whole program is compiled, and any warnings and errors are emitted. But then the program is interpreted/executed, and the execution stops at the first error. The execution mode can be changed by the flag 'compiler_mode'.
+
+    This behaviour allows the developer to experience benefits of a compiled language, and the benefits of an interpreted language.
