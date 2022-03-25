@@ -79,6 +79,9 @@ has been `undefine`d, is an error. Some examples.
 Notes:
 - Desired behaviors, and principles of GAPL
   - Easy to read for a first-time, beginner, programmer
+    - Minimize use of symbols
+    - Symbols used should be very obvious
+    - A person first uses symbol to learn/perform maths, so use those symbols, with the same meaning.
   - Easy to write programs in many languages, in addition to English
   - Lazy evaluation; evaluate expressions only when their value is needed
   - Strongly typed; the type of a variable or expression is known at compile time
