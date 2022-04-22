@@ -97,3 +97,5 @@ Notes:
     The whole program is compiled, and any warnings and errors are emitted. But then the program is interpreted/executed, and the execution stops at the first error. The execution mode can be changed by the flag 'compiler_mode'.
 
     This behaviour allows the developer to experience benefits of a compiled language, and the benefits of an interpreted language.
+- Desired kewords
+  - Use keyword 'skip' instead of 'continue', to skip execution of rest of the loop body.
