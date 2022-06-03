@@ -64,7 +64,8 @@ Above is an example of an empty #code section.
 The code is composed of statements. Each statement is terminated by a semicolon
 `;`. Whitespace between tokens of text are ignored. The space character ` `, is
 the only accepted whitespace representation; any other characters, or byte
-sequences, like tabs, or NUL byte, are treated as an error.
+sequences, like tabs, or NUL byte, are treated as an error. There must be at
+least one whitespace between any two tokens on a line.
 
 The `define` keyword, and its alias `def`, is used to define a variable in the
 code. The `undefine` keyword, or its alias `undef`, removes the variable from
